@@ -10,7 +10,7 @@
 
 ![capa](https://github.com/Ioiofmanzali/Sprint3_FIAP_Grupo09/blob/main/assets/capa.jpeg)
 
-## Grupo 22
+## Grupo 9
 
 ## 👨‍🎓 Integrantes: 
 - <a href="https://www.linkedin.com/in/jonatasgomes">Jônatas Gomes Alves</a>
