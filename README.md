@@ -48,7 +48,13 @@ O projeto foi desenvolvido em Python, utilizando as bibliotecas, Streamlit, Pand
 
 ### 🛠️ MELHORIAS IMPLEMENTADAS EM RELAÇÃO À VERSÃO 1.0.0
 
-ESCREVER QDO FINALIZAR
+  * NOVOS DATASETS:
+     - CONAB: custos de produção das culturas de Triticale, Trigo, Amendoim, Batata-inglesa, Feijão (1a safra), Tomate, Sorgo e Soja.
+     - INMET: os dados de todas as estações de 2019 a abril de 2025
+     - SIDRA/IBGE: dados agricolas para as culturas de Triticale, Trigo, Amendoim, Batata-inglesa, Feijão (1a safra), Tomate, Sorgo e Soja.
+     - Clima: dados poligonais de clima obtidos a partir do dataset clima_5000
+     - Solo: dados poligonais de solo obtidos a partir do dataset solo_5000
+     - Unidades Territoriais: localizacao geografica (LAT/ LONG) dos municipios do território brasileiro, nome e sua altitude em relacao ao nivel do mar.   
 
 ### ❗ PRÉ-REQUISITOS 
 
@@ -72,7 +78,8 @@ Maiores informações sobre a instalação e uso dessas linguagens de Programaç
 
 ## 🛠️ TECNOLOGIAS UTILIZADAS
 
-![Streamlit](https://img.shields.io/badge/Streamlit-%23FE4B4B.svg?style=for-the-badge&logo=streamlit&logoColor=white) &nbsp; ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) &nbsp; ![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=Oracle&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-%23FE4B4B.svg?style=for-the-badge&logo=streamlit&logoColor=white) &nbsp; ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) &nbsp; ![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=Oracle&logoColor=white) ![GeoPandas](https://img.shields.io/badge/Powered%20by-GeoPandas-43a047?logo=python)
+
 
 ### 1. ORACLE
 
