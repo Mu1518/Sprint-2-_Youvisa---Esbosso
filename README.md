@@ -29,7 +29,7 @@
 
 Documentação Técnica do Projeto "CHALLENGE INGREDION - Sprint 3"
 
-![Versão 2.0.0](https://img.shields.io/badge/Vers%C3%A3o%202.0.0-gray?style=flat) 
+![Versão 3.0.0](https://img.shields.io/badge/Vers%C3%A3o%203.0.0-gray?style=flat) 
 
 Autores: Jonatas Gomes, Iolanda Manzali, Murilo Nasser, Pedro Sousa, Amanda Fragnan
 
@@ -46,7 +46,7 @@ O projeto foi desenvolvido em Python, utilizando as bibliotecas, Streamlit, Pand
 
 ** obs: todo o código desse projeto foi escrito utilizando a IDE (VSCode).
 
-### 🛠️ MELHORIAS IMPLEMENTADAS EM RELAÇÃO À VERSÃO 1.0.0
+### 🛠️ MELHORIAS IMPLEMENTADAS EM RELAÇÃO À VERSÃO 2.0.0
 
   * NOVOS DATASETS:
      - CONAB: custos de produção das culturas de Triticale, Trigo, Amendoim, Batata-inglesa, Feijão (1a safra), Tomate, Sorgo e Soja.

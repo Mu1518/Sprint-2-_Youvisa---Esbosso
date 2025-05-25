@@ -8,7 +8,12 @@ from app_produtividade import exibir_pagina_produtividade
 from app_treinamento import exibir_pagina_treinamento
 
 
-st.markdown(""" <style> .centered-text {text-align: center}</style> """, unsafe_allow_html=True)
+st.markdown("""
+    <style>
+        .centered-text {text-align: center}
+        .stApp {background-color: rgba(154, 197, 245, 0.2);}
+    </style>
+    """, unsafe_allow_html=True)
 st.markdown('<h1 class="centered-text"><b> 🛰️ CHALLENGE INGREDION</b></h1>', unsafe_allow_html=True)
 st.markdown('<h3 class="centered-text"><b>SPRINT 3</b></h3>', unsafe_allow_html=True)
 locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')  # Configuração de localidade
