@@ -8,7 +8,7 @@
 
 # PROJETO - :artificial_satellite: SPRINT 3 INGREDION  
 
-![capa](https://github.com/Ioiofmanzali/Sprint3_FIAP_Grupo09/blob/main/assets/capa.jpeg)
+![capa](assets/capa.jpeg)
 
 ## Grupo 9
 
