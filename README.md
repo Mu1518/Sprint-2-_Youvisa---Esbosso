@@ -250,6 +250,8 @@ A lógica subjacente é que um NDVI elevado e sustentado durante períodos crít
 
 A análise exploratoria teve como objetivo a avaliação da qualidade dos dados, informando as decisões subsequentes de pré-processamento e engenharia de features para otimizar o desempenho dos modelos de Machine Learning.
 
+![aed](https://github.com/Ioiofmanzali/Sprint3_FIAP_Grupo09/blob/main/assets/aed.JPG)
+
 ## 📈 TREINAMENTO E ESCOLHA DO MELHOR MODELO DE ML
 
 O projeto utiliza os modelos com o objetivo de encontrar a combinação que oferece o melhor desempenho de generalização para os dados, ou seja, que consegue fazer previsões precisas em dados não vistos durante o treinamento de regressão supervisionada para prever a produtividade agrícola. 
