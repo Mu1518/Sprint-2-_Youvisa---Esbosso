@@ -42,29 +42,18 @@ Nesta etapa, será proposta uma solução para o problema, juntamente com a estr
 Este repositório tem como finalidade documentar e armazenar todo o trabalho desenvolvido ao longo do Sprint 1.   
 
 
-## 🛠️ TECNOLOGIAS UTILIZADAS
-
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) &nbsp; ![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=Oracle&logoColor=white) 	
-
 ## ➡️ ARQUITETURA DA SOLUÇÃO
 
 ## 📁 Estrutura das Pastas
 
 - <b>assets</b>: imagens utilizadas no projeto e documentação
   
-- <b>src</b>: códigos principais do programa
-  
-- documentação: relat´roiro com a solução e suas especififcidas e o fluxo de atendimento
+- <b>dcs</b>: documentos prinicpais
 
-  
 - <b>README.md</b>: guia e explicação geral sobre o projeto
 
 
-## 🔗 LINKS IMPORTANTES
-
-
-## 📣 PRÓXIMOS PASSOS 88888
-
+## 📣 PRÓXIMOS PASSOS 
 
             
 
