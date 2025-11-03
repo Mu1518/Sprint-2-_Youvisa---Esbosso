@@ -8,7 +8,7 @@
 
 # PROJETO - :artificial_satellite: SPRINT 1 YOUVISA 
 
-
+![capa](assets/capa.jpeg)
 
 ## Grupo 3
 
