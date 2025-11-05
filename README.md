@@ -25,18 +25,10 @@
 ### Coordenador(a)
 - <a href="https://www.linkedin.com/company/inova-fusca">Andre Godoi Chaviato</a>
 
-## :page_with_curl:DOCUMENTAÇÃO 
-
-Documentação Técnica do Projeto "CHALLENGE YOUVISA - Sprint 1"
-
-![Versão 1.0.0](https://img.shields.io/badge/Vers%C3%A3o%201.0.0-gray?style=flat) 
-
-Autores: Jonatas Gomes, Iolanda Manzali, Murilo Nasser, Pedro Sousa, Amanda Fragnan
-
 ## 🔍 SOBRE O PROJETO
-Bem-vindos ao Sprint 1 do Challenge realizado em parceria com a Youvisa.
+Bem-vindos ao Challenge do Youvisa.
 
-A **YOUVISA**, empresa especializada na emissão de vistos e passaportes, enfrenta desafios de **ineficiência operacional** devido ao alto volume de consultas repetitivas, **atendimento fragmentado entre diferentes canais** e **dificuldade na gestão de documentos enviados por clientes**.
+A **YOUVISA**, empresa especializada na emissão de vistos e passaportes, enfrenta desafios de **produtivida** devido ao alto volume de consultas repetitivas, **atendimento fragmentado entre diferentes canais** e **dificuldade na gestão de documentos enviados por clientes**.
 
 Para resolver esse cenário, o grupo desenvolveu o **VistoBot Multi-Channel** — uma **plataforma inteligente de atendimento e automação** que combina **chatbots multicanais**, **Processamento de Linguagem Natural (NLP)** e **Automação Robótica de Processos (RPA)**.
 
@@ -46,29 +38,32 @@ A solução tem como objetivos:
 - **Validar documentos de forma automática**, utilizando **OCR (Reconhecimento Óptico de Caracteres)** integrado ao backend em Python;
 - **Garantir segurança e rastreabilidade** dos dados com armazenamento no **Oracle APEX**, seguindo práticas da **LGPD**.
 
-Em síntese, o **VistoBot Multi-Channel** reduz custos operacionais, melhora a experiência do usuário e oferece um fluxo inteligente de atendimento que decide, de forma autônoma, quando resolver a solicitação via bot ou encaminhar para o atendimento humano.
+
+O projeto do bot com escalabilidade para multicanais propõe a redução de custos operacionais, melhora da experiência do usuário, oferece um fluxo inteligente de atendimento que decide, de forma autônoma, quando resolver a solicitação via bot ou encaminhar para o atendimento humano.
 
 Este repositório tem como finalidade documentar e armazenar todo o trabalho desenvolvido ao longo do Sprint 1.   
 
+## 🧩 ARQUITETURA DA SOLUÇÃO
 
-## ➡️ ARQUITETURA DA SOLUÇÃO
-## 🧩 Arquitetura da Solução — Sprint 1
+A Sprint 1 teve como foco a definição técnica e conceitual da arquitetura do bot, que será chamado **Stuart**(ou Stu), estabelecendo a base estrutural do projeto para as próximas etapas de desenvolvimento.
 
-A **Sprint 1** teve como foco a **definição técnica e conceitual da arquitetura do VistoBot Multi-Channel**, estabelecendo a base estrutural do projeto para as próximas etapas de desenvolvimento.
+O principal objetivo desta entrega foi planejar a integração entre os módulos de automação, NLP, OCR e banco de dados, garantindo que a plataforma do Stuart fosse escalável, segura e alinhada às operações da YOUVISA.
 
-O principal objetivo desta entrega foi **planejar a integração entre os módulos de automação, NLP, OCR e banco de dados**, garantindo uma plataforma escalável, segura e alinhada às operações da YOUVISA.
+A arquitetura proposta para o Stu adota um modelo de microfluxos orquestrados em Python (FastAPI), responsável por centralizar suas decisões e conectar os principais componentes do sistema:
 
-A arquitetura proposta adota um modelo de **microfluxos orquestrados em Python (FastAPI)**, responsável por centralizar decisões e conectar os principais componentes do sistema:
+Chatbot Multicanal: ponto de entrada das interações do usuário via Telegram, com expansão planejada para WhatsApp e Webchat.
 
-- **Chatbot Multicanal:** ponto de entrada das interações do usuário via Telegram, com expansão planejada para WhatsApp e Webchat.  
-- **Módulo de NLP:** realiza a classificação de intenções e a extração de entidades relevantes (país, tipo de visto, status de processo).  
-- **Pipeline OCR/RPA:** executa a leitura e validação automática de documentos enviados, reduzindo o tempo de triagem.  
-- **Banco de Dados Oracle APEX:** armazena informações de autenticação, registros de atendimento e logs de transbordo humano.  
-- **Camada de Segurança:** utiliza tokens de acesso e criptografia de dados em trânsito e repouso.  
-- **Módulo de Transbordo Humano:** direciona casos complexos para agentes, preservando o contexto completo da interação.
+Módulo de NLP: realiza a classificação de intenções e a extração de entidades relevantes (país, tipo de visto, status de processo).
 
-Essa estrutura permite **automatizar até 80% dos atendimentos**, mantendo **segurança, rastreabilidade e uma experiência fluida** para o usuário.  
-Com isso, a Sprint 1 consolida a fundação técnica necessária para que a YOUVISA evolua rumo a um **atendimento digital inteligente, eficiente e integrado**.
+Pipeline OCR/RPA: executa a leitura e validação automática de documentos enviados, reduzindo o tempo de triagem.
+
+Banco de Dados Oracle APEX: armazena informações de autenticação, registros de atendimento e logs de transbordo humano.
+
+Camada de Segurança: utiliza tokens de acesso e criptografia de dados em trânsito e repouso.
+
+Módulo de Transbordo Humano: direciona casos complexos para agentes, preservando o contexto completo da interação.
+
+Essa estrutura permite que o Stuart automatize até 80% dos atendimentos, mantendo segurança, rastreabilidade e uma experiência fluida para o usuário. Com isso, a Sprint 1 consolida a fundação técnica necessária para que a YOUVISA evolua rumo a um atendimento digital inteligente, eficiente e integrado com o Stu.
 
 
 ## 📁 Estrutura das Pastas
@@ -82,12 +77,12 @@ Com isso, a Sprint 1 consolida a fundação técnica necessária para que a YOUV
 
 ## 📣 PRÓXIMOS PASSOS 
 
-Com a arquitetura definida e a documentação concluída, o próximo ciclo do projeto concentra-se na **implementação prática e validação técnica** do VistoBot Multi-Channel.  
+Com a arquitetura definida e a documentação concluída, o próximo ciclo do projeto concentra-se na **implementação prática e validação técnica** do |Bot Stu.  
 
 As atividades estão organizadas em quatro frentes principais:
 
 ### 🧠 1. Inteligência e Automação
-- Implementar o **chatbot no Telegram** com fluxos básicos de atendimento.  
+- Implementar o **chatbot no Telegram** para atuar como Tier 1 de atendimento, gerenciando e resolvendo os fluxos mais básicos e consultas simples. 
 - Integrar o módulo de **NLP (spaCy/NLTK)** para identificar intenções e entidades.  
 - Desenvolver o pipeline de **OCR (Tesseract)** para validação automática de documentos enviados pelos usuários.
 
@@ -96,14 +91,13 @@ As atividades estão organizadas em quatro frentes principais:
 - Configurar autenticação e logs centralizados para rastrear interações e desempenho.  
 
 ### 🤝 3. Atendimento Humano
-- Implementar o módulo de **transbordo inteligente**, encaminhando casos complexos com contexto completo ao agente humano.  
+- Implementar o módulo de **transbordo inteligente**, responsável por direcionar ao agente humano não apenas os casos complexos, mas também as solicitações que exigem autenticação, o envio de documentos no fluxo híbrido, e as questões não resolvidas pelo Tier 1 (consultas simples). 
 - Criar uma interface simples para registro, acompanhamento e fechamento de tickets.  
 
 ### 🔍 4. Testes e Monitoramento
 - Executar testes de desempenho e precisão do NLP.  
 - Monitorar métricas de uso, como tempo médio de resposta, taxa de resolução automática e volume de transbordos.  
 
-Essas entregas consolidarão a evolução do projeto da fase conceitual para um **protótipo funcional**, validando na prática o uso de **IA e automação** no atendimento da YOUVISA.
             
 
 ##  :octocat: CONTRIBUIÇÕES AO PROJETO
