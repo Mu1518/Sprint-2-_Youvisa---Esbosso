@@ -81,7 +81,7 @@ Com isso, a Sprint 1 consolida a fundação técnica necessária para que a YOUV
 
 - <b>assets</b>: imagens utilizadas no projeto e documentação
   
-- <b>dcs</b>: documentos prinicpais
+- <b>docs</b>: documentos prinicpais
 
 - <b>README.md</b>: guia e explicação geral sobre o projeto
 
@@ -89,6 +89,7 @@ Com isso, a Sprint 1 consolida a fundação técnica necessária para que a YOUV
 ## 📣 PRÓXIMOS PASSOS 
 
 Com a arquitetura definida e a documentação concluída, o próximo ciclo do projeto concentra-se na **implementação prática e validação técnica** do VistoBot Multi-Channel.  
+
 As atividades estão organizadas em quatro frentes principais:
 
 ### 🧠 1. Inteligência e Automação
