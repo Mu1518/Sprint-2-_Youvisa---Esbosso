@@ -6,11 +6,11 @@
 
 <br>
 
-# PROJETO - <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/0dd30789-c0b7-4310-92b9-fa4bd6091244" />  SPRINT 1 YOUVISA 
+# ENTERPRISE CHALLENGE - SPRINT 2 YOUVISA
 
-![capa](https://github.com/Mu1518/FIAP-FASE3-Sprint1_Youvisa/blob/main/assets/Capa_Sp1.png)
+![capa]
 
-## Grupo 3
+## Grupo 4
 
 ## 👨‍🎓 Integrantes: 
 - <a href="https://www.linkedin.com/in/jonatasgomes">Jônatas Gomes Alves</a>
@@ -25,82 +25,178 @@
 ### Coordenador(a)
 - <a href="https://www.linkedin.com/company/inova-fusca">Andre Godoi Chaviato</a>
 
-## 🔍 SOBRE O PROJETO
-Bem-vindos ao Challenge do Youvisa.
+## 🌎SOBRE O PROJETO*
+O **PROJETO SPRINT 2 YOUVISA** é uma plataforma inteligente desenvolvida para simplificar, automatizar e gerenciar processos de solicitação de vistos de estudo. É uma aplicação Single Page Application (SPA) desenvolvida em React com TypeScript, projetada para simular um assistente virtual de atendimento ao cliente. Ele integra um Chatbot inteligente ("Stu"), um pipeline de processamento de documentos via OCR (Reconhecimento Óptico de Caracteres) e um painel de gestão de tarefas. 
 
-A **YOUVISA**, empresa especializada na emissão de vistos e passaportes, enfrenta desafios de **produtivida** devido ao alto volume de consultas repetitivas, **atendimento fragmentado entre diferentes canais** e **dificuldade na gestão de documentos enviados por clientes**.
+Diferente de sistemas tradicionais baseados em formulários estáticos, o YOUVISA emprega Agentes de IA Multimodais para ler, interpretar e validar documentos (Passaportes, Extratos, Cartas de Aceite) em tempo real, aplicando regras consulares complexas sem intervenção humana
 
-Para resolver esse cenário, o grupo desenvolveu o **VistoBot Multi-Channel** — uma **plataforma inteligente de atendimento e automação** que combina **chatbots multicanais**, **Processamento de Linguagem Natural (NLP)** e **Automação Robótica de Processos (RPA)**.
+![alt text](https://img.shields.io/badge/React-18-blue?logo=react) 
+![alt text](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript) 
+![alt text](https://img.shields.io/badge/Vite-5.0-646CFF?logo=vite) 
+![alt text](https://img.shields.io/badge/AI-Google%20Gemini-8E75B2?logo=google) 
+![alt text](https://img.shields.io/badge/Styling-Tailwind-38B2AC?logo=tailwindcss)
+![alt text](https://img.shields.io/badge/Oracle-Autonomous_DB-F80000?logo=oracle)
+![alt text](https://img.shields.io/badge/Backend-PL%2FSQL-black)
 
-A solução tem como objetivos:
-- **Automatizar até 80% das interações** iniciais com o cliente por meio de respostas rápidas e triagem automatizada de documentos;
-- **Unificar os canais de atendimento** (Telegram, WhatsApp e Webchat), mantendo histórico e consistência nas respostas;
-- **Validar documentos de forma automática**, utilizando **OCR (Reconhecimento Óptico de Caracteres)** integrado ao backend em Python;
-- **Garantir segurança e rastreabilidade** dos dados com armazenamento no **Oracle APEX**, seguindo práticas da **LGPD**.
+---
 
+# 🚀 **PRINCIPAIS FUNCIONALIDADES**
 
-O projeto do bot com escalabilidade para multicanais propõe a redução de custos operacionais, melhora da experiência do usuário, oferece um fluxo inteligente de atendimento que decide, de forma autônoma, quando resolver a solicitação via bot ou encaminhar para o atendimento humano.
+### 🤖 Chatbot Inteligente (Stu)
+- Assistente virtual proativo que guia o usuário.
+- Contexto de conversa mantido para recuperação de senhas e fluxo de decisões.
+- Integração com base de dados de vistos de diversos países (`visaData.ts`).
 
-Este repositório tem como finalidade documentar e armazenar todo o trabalho desenvolvido ao longo do Sprint 1.   
+### 👁️ Visão Computacional & IA Generativa
+- **OCR Avançado:** Upload de documentos (Passaportes, RGs, Extratos).
+- **Validação de Regras de Negócio:** Verifica datas de expiração, consistência de dados e legibilidade utilizando o modelo **Google Gemini 2.5 Flash**.
+- **Feedback Imediato:** O usuário recebe aprovação ou rejeição do documento em segundos.
 
-## 🧩 ARQUITETURA DA SOLUÇÃO
+### 📊 Painel do Cliente (Dashboard)
+- Barra de progresso visual do processo de visto.
+- Lista de documentos pendentes vs. enviados.
+- Feedback visual de status (Aprovado ✅, Rejeitado ❌, Em Análise ⚠️).
 
-A Sprint 1 teve como foco a definição técnica e conceitual da arquitetura do bot, que será chamado **Stuart**(ou Stu), estabelecendo a base estrutural do projeto para as próximas etapas de desenvolvimento.
+### 🛡️ Painel Administrativo
+- Gestão de usuários e documentos.
+- Geração de relatórios em PDF (Geral e Dossiê Individual) via `jsPDF`.
+- Métricas e KPIs (Taxa de aprovação, tipos de documentos mais enviados).
+- Backup do banco de dados local (JSON).
 
-O principal objetivo desta entrega foi planejar a integração entre os módulos de automação, NLP, OCR e banco de dados, garantindo que a plataforma do Stuart fosse escalável, segura e alinhada às operações da YOUVISA.
+### ☁️ Arquitetura Híbrida (Offline-First)
+- **LocalDB:** Persistência imediata via LocalStorage para experiência fluida.
+- **Oracle ORDS:** Sincronização com banco de dados Oracle via API REST.
+- **Notificações:** Envio de e-mails transacionais via EmailJS.
+- **Gestão de Ciclo de Vida:** CRUD completo de usuários com exclusão em cascata (Cascade Delete).
 
-A arquitetura proposta para o Stu adota um modelo de microfluxos orquestrados em Python (FastAPI), responsável por centralizar suas decisões e conectar os principais componentes do sistema:
+---
 
-Chatbot Multicanal: ponto de entrada das interações do usuário via Telegram, com expansão planejada para WhatsApp e Webchat.
+## **🛠️ TECNOLOGIAS UTILIZADAS**
 
-Módulo de NLP: realiza a classificação de intenções e a extração de entidades relevantes (país, tipo de visto, status de processo).
+ **Frontend:**
+- [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/) (Estilização)
+- [Lucide React](https://lucide.dev/) (Ícones)
 
-Pipeline OCR/RPA: executa a leitura e validação automática de documentos enviados, reduzindo o tempo de triagem.
+**Inteligência Artificial:**
+- [Google Generative AI SDK](https://www.npmjs.com/package/@google/genai) (Modelo Gemini 2.5 Flash)
 
-Banco de Dados Oracle APEX: armazena informações de autenticação, registros de atendimento e logs de transbordo humano.
+**Backend & Serviços:**
+- **Oracle Database** (via ORDS REST APIs)
+- **EmailJS** (Automação de e-mails)
+- **Local Storage** (Persistência local)
 
-Camada de Segurança: utiliza tokens de acesso e criptografia de dados em trânsito e repouso.
+**Utilitários:**
+- `jspdf` & `jspdf-autotable` (Relatórios)
 
-Módulo de Transbordo Humano: direciona casos complexos para agentes, preservando o contexto completo da interação.
+---
 
-Essa estrutura permite que o Stuart automatize até 80% dos atendimentos, mantendo segurança, rastreabilidade e uma experiência fluida para o usuário. Com isso, a Sprint 1 consolida a fundação técnica necessária para que a YOUVISA evolua rumo a um atendimento digital inteligente, eficiente e integrado com o Stu.
+## **⚙️ PIPELINE DA SOLUÇÃO**
 
+O fluxo de dados da aplicação segue uma abordagem centrada no cliente com validação assistida por IA:
 
-## 📁 Estrutura das Pastas
+1.  **Entrada:** O usuário interage via Chat ou Dashboard e faz upload de uma imagem.
+2.  **Pré-processamento:** A imagem é convertida para Base64 no navegador.
+3.  **Análise (IA):** O payload é enviado para o **Google Gemini** com um prompt de sistema robusto (OCR + Regras de Visto).
+4.  **Processamento:** O JSON retornado pela IA é interpretado (Válido/Inválido, Dados extraídos).
+5.  **Persistência:** 
+    *   Salva instantaneamente no `LocalDB` (Browser).
+    *   Tenta sincronização com a API Oracle (`/ords/fiap/youvisa`).
+6.  **Notificação:** Dispara e-mail de status via **EmailJS**.
 
-- <b>assets</b>: imagens utilizadas no projeto e documentação
+---
+
+## **ESTRUTURA DO PROJETO**
+
+A estrutura do projeto está organizada para separar a lógica de interface (React), a lógica de negócios (Services) e os artefatos de referência do Banco de Dados Oracle (DB).
+
+![estrutura](https://github.com/Ioiofmanzali/Ioiofmanzali-FIAP_FASE4_Sprint2_Youvisa/blob/main/assets/estrutura.JPG)
+
+---
+
+## **🧩 FLUXOGRAMA DETALHADO DA ARQUITETURA**
+
+![fluxoyv](https://github.com/Ioiofmanzali/Ioiofmanzali-FIAP_FASE4_Sprint2_Youvisa/blob/main/assets/fluxo_yv.jpg)
+
+- O fluxograma tambem pode ser acessado através do link: [Fluxo](https://drive.google.com/file/d/1blecTDD8D_ZqJx5y8haf94RYTqLbpMt2/view?usp=sharing)
   
-- <b>docs</b>: documentos prinicpais
+---
 
-- <b>README.md</b>: guia e explicação geral sobre o projeto
+## **COMO EXECUTAR O PROJETO**
 
+**Pré-requisitos**
+- Node.js (v18 ou superior)
+- NPM ou Yarn
+- Chave de API do Google Gemini (Gratuita no Google AI Studio e EmailJS)
 
-## 📣 PRÓXIMOS PASSOS 
+**Passo 1: Clonar ou Baixar**
 
-Com a arquitetura definida e a documentação concluída, o próximo ciclo do projeto concentra-se na **implementação prática e validação técnica** do |Bot Stu.  
+Baixe os arquivos do projeto para uma pasta local e os **posicione conforme descrito no tópico "Estrutura de Pastas"**.
 
-As atividades estão organizadas em quatro frentes principais:
+Se preferir tambem disponibilizamos os arquivos de código do projeto através do link abaixo, com exceção do arquivo .env:
+- [Projeto Youvisa SP2](https://drive.google.com/drive/folders/1oICDvExqfiOz8XHSuX-EdkJt8v8R_14-?usp=drive_link)
 
-### 🧠 1. Inteligência e Automação
-- Implementar o **chatbot no Telegram** para atuar como Tier 1 de atendimento, gerenciando e resolvendo os fluxos mais básicos e consultas simples. 
-- Integrar o módulo de **NLP (spaCy/NLTK)** para identificar intenções e entidades.  
-- Desenvolver o pipeline de **OCR (Tesseract)** para validação automática de documentos enviados pelos usuários.
+**Passo 2: Instalar Dependências**
 
-### ☁️ 2. Infraestrutura e Integração
-- Conectar o backend em **Python (FastAPI)** ao **Oracle APEX** para persistência e gestão segura de dados.  
-- Configurar autenticação e logs centralizados para rastrear interações e desempenho.  
+Abra o terminal na pasta do projeto, digite o comando para entrar na pasta onde salvou seu projeto (cd C:/Users/seu_usuario/pasta_do_projeto) e execute o comando **npm install**
 
-### 🤝 3. Atendimento Humano
-- Implementar o módulo de **transbordo inteligente**, responsável por direcionar ao agente humano não apenas os casos complexos, mas também as solicitações que exigem autenticação, o envio de documentos no fluxo híbrido, e as questões não resolvidas pelo Tier 1 (consultas simples). 
-- Criar uma interface simples para registro, acompanhamento e fechamento de tickets.  
+![estutura](https://github.com/Ioiofmanzali/Ioiofmanzali-FIAP_FASE4_Sprint2_Youvisa/blob/main/assets/etapa1.jpg) 
 
-### 🔍 4. Testes e Monitoramento
-- Executar testes de desempenho e precisão do NLP.  
-- Monitorar métricas de uso, como tempo médio de resposta, taxa de resolução automática e volume de transbordos.  
+![estutura](https://github.com/Ioiofmanzali/Ioiofmanzali-FIAP_FASE4_Sprint2_Youvisa/blob/main/assets/etapa2.jpg) 
 
-            
+Obs: Para que o comando rodasse com sucesso no terminal da máquina de teste utilizada foi necessário acrescentar .cmd imediatamente apos o npm. Plataformas diferentes (Mac, Windows) podem exigir ajustes nos comandos a serem digitados.       
+ 
+**Passo 3: Configurar as Variáveis de Ambiente**
 
-##  :octocat: CONTRIBUIÇÕES AO PROJETO
+O sistema precisa de uma chave da Google para funcionar. 
+
+Através de uma conta Google:
+ * obtenha sua chave gratuita da API no Google AI Studio
+ * crie sua chave pública e templates no site do EmailJS (conta gratuita, limita a quantidade de templates permitidos e interações).
+
+Obs: para esse projeto foi criada um email dedicado para o projeto.
+
+Crie um arquivo chamado .env na raiz do projeto e adicione as seguintes linhas de código: 
+       
+       API_KEY=Sua_Chave_Comeca_Com_AIza_Aqui
+       
+       VITE_API_KEY=sua_chave_gemini
+       
+       VITE_EMAILJS_SERVICE_ID=service_id
+       
+       VITE_EMAILJS_PUBLIC_KEY=public_key
+       
+       VITE_TEMPLATE_DOC_STATUS=template_id
+       
+       VITE_TEMPLATE_PROCESS_STATUS=template_id
+       
+       VITE_EMAIL_SENDER=email@escolhido.com
+
+       
+**Passo 4: Rodar o Projeto**
+
+Execute o servidor de desenvolvimento:
+
+![estutura](https://github.com/Ioiofmanzali/Ioiofmanzali-FIAP_FASE4_Sprint2_Youvisa/blob/main/assets/etapa3.jpg) 
+
+![estutura](https://github.com/Ioiofmanzali/Ioiofmanzali-FIAP_FASE4_Sprint2_Youvisa/blob/main/assets/etapa4.jpf.JPG) 
+
+PS: O terminal mostrará um link. Abra-o no seu navegador.
+
+![estutura](https://github.com/Ioiofmanzali/Ioiofmanzali-FIAP_FASE4_Sprint2_Youvisa/blob/main/assets/capa.jpg)
+
+### **Deploy e Build** (opcional)
+
+Para gerar os arquivos finais para produção (hospedagem no Vercel, Netlify, etc.):
+
+        npm run build
+
+PS: Isso criará uma pasta dist/ otimizada e minificada.
+
+---
+
+## :octocat: CONTRIBUIÇÕES AO PROJETO
 
 Ficamos muito felizes com a sua contribuição e valorizamos cada sugestão e esforço dedicado a aprimorá-lo.
 
@@ -116,12 +212,66 @@ Como Contribuir:
 
 Seu Pull Request será revisado pela equipe e, se tudo estiver correto, será aceito e suas contribuições serão integradas ao projeto 😃!
 
+---
 
-## 🗃 Histórico de lançamentos
+## 📁 ESTRUTURA DE PASTAS
 
-* 1.0.0 - 03/11/2025
+- <b>assets</b>: imagens utilizadas no projeto
+
+- <b>youvisa_project</b>: arquivos principais do projeto divididos em pastas e subpastas de acordo com a estrutura do projeto 
+
+- <b>docs<b>: arquivo paises.json
+
+- <b>relatorio<b>: dOcumentação técnica em pdf e relatorios gerenciais gerados pela aplicação  
+  
+- <b>README.md</b>: guia e explicação geral sobre o projeto
+
+---
+
+## **PRÓXIMOS PASSOS E DESAFIOS**
+
+Como o projeto opera atualmente em um modelo *client-side* com simulação de persistência (`localStorage`), os próximos passos visam a profissionalização da arquitetura, implementação real do backend e endurecimento da segurança.
+
+### 🚧 1. Backend e Integração (Prioridade Alta)
+Atualmente, a aplicação simula o backend. O objetivo é conectar com a infraestrutura Oracle definida na pasta `/src/db`.
+*   **Implementação da API:** Colocar os serviços REST definidos em `rest_api.sql` em produção no Oracle Cloud (ORDS).
+*   **Middleware de Segurança (BFF):** Criar um servidor intermediário em Python para atuar como *Backend for Frontend*.
+    *   *Motivo:* Hoje, a chave da API do Google Gemini (`API_KEY`) e as credenciais do EmailJS estão expostas no Frontend. O backend deve intermediar essas chamadas para ocultar as chaves.
+*   **Sincronização Real:** Substituir a lógica de "tentativa de upload" do `apiService.ts` por uma fila de sincronização robusta que gerencie falhas de rede e retentativas automáticas.
+
+### 🔐 2. Segurança e Criptografia
+Como lidamos com **PII (Personal Identifiable Information)** — Passaportes, RGs e dados financeiros — a segurança é o pilar mais crítico.
+*   **Criptografia em Trânsito:** Garantir que todas as comunicações (Front ↔ Back ↔ Oracle) ocorram estritamente via **HTTPS/TLS 1.3**.
+*   **Criptografia em Repouso:**
+    *   Implementar criptografia no banco de dados Oracle (TDE - Transparent Data Encryption) para as colunas sensíveis.
+    *   **Não armazenar senhas em texto plano.** Migrar a lógica de login atual para uso de **BCrypt** ou **Argon2** no backend.
+*   **Proteção do LocalStorage:**
+    *   *Desafio:* O `localStorage` é vulnerável a ataques XSS.
+    *   *Solução:* Migrar tokens de sessão para **HttpOnly Cookies** e, se necessário persistir dados sensíveis offline, utilizar **IndexedDB** com criptografia antes de salvar.
+*   **Sanitização:** Implementar validação rigorosa no backend (Zod/Joi) para prevenir SQL Injection nos endpoints do Oracle.
+
+### ⚖️ 4. Desafios de Conformidade (LGPD/GDPR)
+*   **Retenção de Dados:** Implementar rotinas automáticas no banco de dados para excluir imagens de documentos após o processamento e validação, mantendo apenas os metadados necessários, para reduzir o risco de vazamento.
+*   **Termos de Uso:** Adicionar checkbox obrigatório de consentimento para processamento de dados biométricos/pessoais via IA antes do upload.
+
+### 🧠 5. Melhorias na IA
+*   **Fallback de Modelo:** Implementar lógica para usar modelos menores/mais baratos se o Gemini falhar ou demorar.
+*   **Detecção de Fraude:** Treinar ou configurar o prompt para detectar indícios de manipulação digital na imagem.
+
+---
+
+## **VIDEO DEMONSTRATIVO**
+
+Assista ao vídeo e explore a experiência do usuário com o Stu.
+
+[Clique para Assistir](https://youtu.be/f8mrI1JxSdE)
+
+---
+
+## 🗃 HISTÓRICO DE LANÇAMENTOS
+
+![Versão 1.0.0](https://img.shields.io/badge/Vers%C3%A3o%201.0.0-darkblue?style=flat)  - 22/11/2025
     
-
 ## 📋 Licença
 
 <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/agodoi/template">MODELO GIT FIAP</a> por <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://fiap.com.br">Fiap</a> está licenciado sobre <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
